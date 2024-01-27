@@ -79,8 +79,8 @@
                     <nav
                         class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                         <div class="container-fluid px-0">
-                            <a class="navbar-brand font-weight-bolder ms-sm-3" href="#" rel="tooltip"
-                                title="Inventores Shop" data-placement="bottom" target="_blank">
+                            <a class="navbar-brand font-weight-bolder ms-sm-3" href="/" rel="tooltip"
+                                title="Inventores Shop" data-placement="bottom" >
 
                                 <img src="my-layout/assets/img/Logo_inventores_shop_1.png"
                                     style="max-width: 160px; max-height: 70px;">
@@ -458,7 +458,7 @@
                                 Todos los derechos reservados. Copyright ©
                                 <script>
                                     document.write(new Date().getFullYear())
-                                </script> Inventores Shop Que nada te detenga.
+                                </script> Inventores Shop.
                             </p>
                         </div>
                     </div>

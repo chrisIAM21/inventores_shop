@@ -323,7 +323,7 @@
                                     <script>
                                         document.write(new Date().getFullYear())
                                     </script>,
-                                    Todos los derechos reservados. Inventores Shop Que nada te detenga.
+                                    Todos los derechos reservados. Inventores Shop.
                                 </div>
                             </div>
 

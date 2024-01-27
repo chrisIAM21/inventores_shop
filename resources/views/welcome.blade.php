@@ -42,7 +42,7 @@
                 <div class="row">
                     <div class="row justify-content-center text-center my-sm-5">
                         <div class="col-lg-6">
-                            <h2 class="text-dark mb-0">¡Descubre tu estilo único en Inventores Shop!</h2>
+                            <h2 class="text-dark mb-0">¡Descubre Inventores Shop!</h2>
                             <h2 class="text-primary text-gradient">Con una amplia colección de productos impresos en 3D, encontrarás la opción perfecta para plasmar tus ideas y gustos.</h2>
                             <p class="lead">Explora nuestras creaciones tridimensionales, donde la moda se une a la innovación. Cada pieza es una expresión única de tu estilo y creatividad.</p>
                         </div>
