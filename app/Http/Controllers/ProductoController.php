@@ -48,27 +48,19 @@ class ProductoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $request->validate([
-            'marca' => 'required|max:255',
-            'modelo' => 'required|max:255',
-            'color' => ['required', 'max:40'],
-            'stock' => 'required|numeric|min:0',
-        ]);
+{
+    $request->validate([
+        'nombre' => 'required|max:255',
+        'color' => 'required|max:40',
+        'stock' => 'required|numeric|min:0',
+        'categoria_id' => 'exists:categorias,id',
+    ]);
 
-        /*
-        $producto = new Producto();
-        $producto->marca = $request->marca;
-        $producto->modelo = $request->modelo;
-        $producto->color = $request->color;
-        $producto->stock = $request->stock;
-        $producto->save();
-        */
+    $producto = Producto::create($request->all());
+    $producto->categorias()->attach($request->input('categoria_id'));
 
-        Producto::create($request->all());
-
-        return redirect()->route('productos.create')->with('producto', 'creado');
-    }
+    return redirect()->route('productos.create')->with('producto', 'creado');
+}
 
     /**
      * Display the specified resource.
@@ -103,28 +95,19 @@ class ProductoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Producto $producto)
-    {
-        $request->validate([
-            'marca' => 'required|max:255',
-            'modelo' => 'required|max:255',
-            'color' => ['required', 'max:40'],
-            'stock' => 'required|numeric|min:0',
-        ]);
-        /*
-        $producto->marca = $request->marca;
-        $producto->modelo = $request->modelo;
-        $producto->color = $request->color;
-        $producto->stock = $request->stock;
-        $producto->save();
-        */
+{
+    $request->validate([
+        'nombre' => 'required|max:255',
+        'color' => 'required|max:40',
+        'stock' => 'required|numeric|min:0',
+        'categoria_id' => 'exists:categorias,id',
+    ]);
 
-        $producto->update($request->except('_token', '_method')); // Actualizar los campos del producto
-        $producto->categorias()->sync($request->input('categorias', [])); // Sincronizar las categorías
-        // $producto::where('id', $producto->id)->update($request->except('_token', '_method'));
+    $producto->update($request->all());
+    $producto->categorias()->sync($request->input('categoria_id'));
 
-        return redirect()->route('productos.edit', $producto)->with('producto', 'editado');
-        // return redirect()->route('productos.edit', $producto)->with('exito');
-    }
+    return redirect()->route('productos.edit', $producto)->with('producto', 'editado');
+}
 
     /**
      * Remove the specified resource from storage.

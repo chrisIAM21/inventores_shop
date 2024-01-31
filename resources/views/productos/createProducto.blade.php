@@ -10,20 +10,10 @@
     <div class="card-body px-5 pt-2 pb-2">
         <form action="\productos" method="POST">
             @csrf
-            <label for="marca">Marca: </label>
-            <input class="form-control w-30" type="text" name="marca" id="marca" value="{{ old('marca') }}"
+            <label for="nombre">Nombre: </label>
+            <input class="form-control w-30" type="text" name="nombre" id="nombre" value="{{ old('nombre') }}"
                 required maxlength="255"><br>
-            @error('marca')
-                <div class="alert alert-danger" role="alert">
-                    <strong>{{ $message }}</strong>
-                </div>
-            @enderror
-            <br>
-
-            <label for="modelo">Modelo: </label>
-            <input class="form-control w-30" type="text" name="modelo" id="modelo" value="{{ old('modelo') }}"
-                required maxlength="255"><br>
-            @error('modelo')
+            @error('nombre')
                 <div class="alert alert-danger" role="alert">
                     <strong>{{ $message }}</strong>
                 </div>

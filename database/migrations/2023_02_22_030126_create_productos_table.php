@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
-            $table->text('marca', 255);
-            $table->text('modelo', 255);
-            $table->text('color', 40);
+            $table->string('nombre');
+            $table->string('color', 40);
             $table->integer('stock');
-            $table->softDeletes();
+            $table->timestamps(); // Agregamos los campos de timestamps
+            $table->softDeletes(); // Agregamos softDeletes para soporte de eliminación suave
         });
     }
 

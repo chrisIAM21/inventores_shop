@@ -11,7 +11,7 @@ class Producto extends Model
     use HasFactory;
     use SoftDeletes;
     public $timestamps = false;
-    protected $fillable = ['marca', 'modelo', 'color', 'stock'];
+    protected $fillable = ['nombre', 'color', 'stock'];
 
     // Relacion de muchos a muchos
     public function categorias()
@@ -24,31 +24,31 @@ class Producto extends Model
         return $this->hasMany(Archivo::class);
     }
 
-    // Accessors
-    public function getMarcaAttribute($value)
+    // Accessors, son los que modifican los datos al momento de mostrarlos
+    public function getNombreAttribute($value)
     {
         return ucfirst($value);
-    }
-    public function getModeloAttribute($value)
-    {
-        return strtoupper($value);
     }
     public function getColorAttribute($value)
     {
         return ucfirst($value);
     }
-    
-    // Mutators
-    public function setMarcaAttribute($value)
+    public function getStockAttribute($value)
     {
-        $this->attributes['marca'] = ucfirst($value);
+        return $value . ' unidades';
     }
-    public function setModeloAttribute($value)
+    
+    // Mutators, son los que modifican los datos antes de guardarlos en la base de datos
+    public function setNombreAttribute($value)
     {
-        $this->attributes['modelo'] = strtoupper($value);
+        $this->attributes['nombre'] = ucfirst($value);
     }
     public function setColorAttribute($value)
     {
         $this->attributes['color'] = ucfirst($value);
+    }
+    public function setStockAttribute($value)
+    {
+        $this->attributes['stock'] = $value;
     }
 }

@@ -27,9 +27,7 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                             ID</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                            Marca</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                            Modelo</th>
+                            Nombre</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                             Color</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
@@ -47,10 +45,7 @@
                                 <span class="text-secondary text-xs font-weight-bold ps-3">{{ $producto->id }}</span>
                             </td>
                             <td>
-                                <span class="text-secondary text-xs font-weight-bold">{{ $producto->marca }}</span>
-                            </td>
-                            <td>
-                                <span class="text-secondary text-xs font-weight-bold">{{ $producto->modelo }}</span>
+                                <span class="text-secondary text-xs font-weight-bold">{{ $producto->nombre }}</span>
                             </td>
                             <td>
                                 <span class="text-secondary text-xs font-weight-bold">{{ $producto->color }}</span>

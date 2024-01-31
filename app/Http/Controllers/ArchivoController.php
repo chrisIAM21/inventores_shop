@@ -1,5 +1,5 @@
 <?php
-
+// Si la ruta no la encuentra correctamente debemos eliminar el storage que se encuentre vacío (ruta) y volver a ejecutar el comando php artisan storage:link para enlazar la carpeta storage con la carpeta public
 namespace App\Http\Controllers;
 
 use App\Models\Archivo;

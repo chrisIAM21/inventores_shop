@@ -1,5 +1,5 @@
 <x-admin-layout>
-    <x-slot name="title">Editar producto: {{ $producto->modelo }}</x-slot>
+    <x-slot name="title">Editar producto: {{ $producto->nombre }}</x-slot>
     <x-slot name="breadcrumbs">
         <?php
         $currentPage = basename($_SERVER['PHP_SELF']);
@@ -13,17 +13,10 @@
         <form action="{{ route('productos.update', $producto) }}" method="POST">
             @csrf
             @method('PATCH')
-            <label for="marca">Marca: </label>
-            <input class="form-control w-30" type="text" name="marca" id="marca"
-                value="{{ old('marca') ?? $producto->marca }}"><br>
-            @error('marca')
-                <h4>*{{ $message }}</h4>
-            @enderror
-            <br>
-            <label for="modelo">Modelo: </label>
-            <input class="form-control w-30" type="text" name="modelo" id="modelo"
-                value="{{ old('modelo') ?? $producto->modelo }}"><br>
-            @error('modelo')
+            <label for="nombre">Nombre: </label>
+            <input class="form-control w-30" type="text" name="nombre" id="nombre"
+                value="{{ old('nombre') ?? $producto->nombre }}"><br>
+            @error('nombre')
                 <h4>*{{ $message }}</h4>
             @enderror
             <br>

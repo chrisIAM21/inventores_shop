@@ -1,5 +1,5 @@
 <x-admin-layout>
-    <x-slot name="title">Detalles de productos: {{ $producto->modelo }}</x-slot>
+    <x-slot name="title">Detalles de productos: {{ $producto->nombre }}</x-slot>
     <x-slot name="breadcrumbs">
         <?php
         $currentPage = basename($_SERVER['PHP_SELF']);
@@ -9,10 +9,8 @@
         ?>
     </x-slot>
     <div class="card-body px-5 pt-2 pb-2">
-        <h5>Marca: </h5>
-        <h6>{{ $producto->marca }}</h6>
-        <h5>Modelo: </h5>
-        <h6>{{ $producto->modelo }}</h6>
+        <h5>Nombre: </h5>
+        <h6>{{ $producto->nombre }}</h6>
         <h5>Color: </h5>
         <h6>{{ $producto->color }}</h6>
         <h5>En stock: </h5>

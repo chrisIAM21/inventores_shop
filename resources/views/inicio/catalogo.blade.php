@@ -9,8 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 text-center mx-auto">
-                        <h1 class="text-white pt-3 mt-n5" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);"> Siente el
-                            confort y la calidad de nuestros productos </h1>
+                        <h1 class="text-white pt-3 mt-n5" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);"> Siente la calidad de nuestros productos </h1>
                     </div>
                 </div>
             </div>
@@ -70,7 +69,7 @@
                                 </div>
                                 <div class="card-body">
                                     <!-- Aquí puedes mostrar el nombre del productos y las categorías -->
-                                    <h5 class="card-title">{{ $producto->modelo }}</h5>
+                                    <h5 class="card-title">{{ $producto->nombre }}</h5>
                                     <p class="card-text">
                                         @foreach ($producto->categorias as $categoria)
                                             <span class="badge bg-secondary">{{ $categoria->nombre }}</span>

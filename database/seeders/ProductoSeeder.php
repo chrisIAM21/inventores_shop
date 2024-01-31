@@ -17,31 +17,27 @@ class ProductoSeeder extends Seeder
     public function run()
     {
         DB::table('productos')->insert([
-            'marca' => 'Adidas',
-            'modelo' => 'Stan Smith',
-            'color' => 'Blanco / Verde',
+            'nombre' => 'Mono',
+            'color' => 'Blanco',
             'stock' => 40,
         ]);
         DB::table('productos')->insert([
-            'marca' => 'Nike',
-            'modelo' => 'Blazer Mid 77 EMB',
-            'color' => 'Blanco / Naranja',
-            'stock' => 30,
+            'nombre' => 'Dragón',
+            'color' => 'Rojo',
+            'stock' => 20,
         ]);
         DB::table('productos')->insert([
-            'marca' => 'Nike',
-            'modelo' => 'Revolution 6 Next Nature',
-            'color' => 'Negro / Blanco',
-            'stock' => 20,
+            'nombre' => 'Tigre',
+            'color' => 'Amarillo',
+            'stock' => 30,
         ]);
 
         $producto = new Producto();
-        $producto->marca = 'Adidas';
-        $producto->modelo = 'Forum Low';
-        $producto->color = 'Blanco / Azul';
-        $producto->stock = '100';
+        $producto->nombre = 'León';
+        $producto->color = 'Amarillo';
+        $producto->stock = 10;
         $producto->save();
 
-        Producto::factory(50)->create();
+        Producto::factory(20)->create();
     }
 }

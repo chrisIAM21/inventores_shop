@@ -28,7 +28,7 @@
                 @foreach ($productos as $producto)
                     @if (!$categoria->productos->contains($producto))
                         <option value="{{ $producto->id }}">
-                            {{ $producto->id }} | {{ $producto->marca }} {{ $producto->modelo }}
+                            {{ $producto->id }} | {{ $producto->nombre }}
                         </option>
                     @endif
                 @endforeach
@@ -46,9 +46,7 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                             ID</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                            Marca</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                            Modelo</th>
+                            Nombre</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,11 +56,7 @@
                             <span class="text-secondary text-xs font-weight-bold ps-3">{{ $producto->id }}</span>
                         </td>
                         <td>
-                            <span class="text-secondary text-xs font-weight-bold">{{ $producto->marca }}</span>
-                        </td>
-                        <td>
-                            <span class="text-secondary text-xs font-weight-bold">{{ $producto->modelo }}</span>
-                        </td>
+                            <span class="text-secondary text-xs font-weight-bold">{{ $producto->nombre }}</span>
                         <td>
                             <form method="POST" action="{{ route('categorias.quitarProductos', $categoria) }}">
                                 @csrf

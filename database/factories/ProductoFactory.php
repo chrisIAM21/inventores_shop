@@ -17,8 +17,7 @@ class ProductoFactory extends Factory
     public function definition()
     {
         return [
-            'marca' => $this->faker->company(),
-            'modelo' => $this->faker->words(3, true),
+            'nombre' => $this->faker->company(),
             'color' => $this->faker->safeColorName(),
             'stock' => $this->faker->randomNumber(3),
         ];
