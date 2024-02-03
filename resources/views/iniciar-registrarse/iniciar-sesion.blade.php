@@ -58,9 +58,9 @@
               <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center">
                 <img src="layout-inicio/assets/img/shapes/pattern-lines.svg" alt="pattern-lines" class="position-absolute opacity-4 start-0">
                 <div class="position-relative">
-                  <img class="max-width-500 w-100 position-relative z-index-2" src="my-layout/assets/img/Look_Logo_Nuevo_870x250.png">
+                  <img class="max-width-500 w-100 position-relative z-index-2" src="my-layout/assets/img/Logo_inventores_shop_2.png">
                 </div>
-                <h4 class="mt-5 text-white font-weight-bolder">Descubre tu mejor estilo</h4>
+                <h4 class="mt-5 text-white font-weight-bolder">Descubre Inventores Shop!</h4>
                 <p class="text-white">Vive la mejor experiencia de compra en Inventores Shop</p>
               </div>
             </div>

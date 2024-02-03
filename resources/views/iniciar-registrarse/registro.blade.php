@@ -78,7 +78,7 @@
                 <div class="position-relative">
                   <img class="max-width-500 w-100 position-relative z-index-2" src="my-layout/assets/img/Logo_inventores_shop_1.png">
                 </div>
-                <h4 class="mt-5 text-white font-weight-bolder">Descubre tu mejor estilo</h4>
+                <h4 class="mt-5 text-white font-weight-bolder">Descubre Inventores Shop!</h4>
                 <p class="text-white">Vive la mejor experiencia de compra en Inventores Shop.</p>
               </div>
             </div>

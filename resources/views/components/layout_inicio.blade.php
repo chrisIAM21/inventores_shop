@@ -128,6 +128,24 @@
                                                     </a>
                                                 </li>
 
+                                                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('catalogo')}}">
+                                                        <!-- Enlace -->
+                                                        <div class="d-flex">
+                                                            <div class="icon h-10 me-3 d-flex mt-1">
+                                                            </div>
+                                                            <div
+                                                                class="w-100 d-flex align-items-center justify-content-between">
+                                                                <div>
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Llaveros</h6>
+                                                                    <span class="text-sm">Encuentra lo que buscas</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
 
                                                 <li class="nav-item dropdown dropdown-hover dropdown-subitem">
                                                     <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('catalogo')}}">
@@ -140,7 +158,27 @@
                                                                 <div>
                                                                     <h6
                                                                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                        Deportes</h6>
+                                                                        Pokemón</h6>
+                                                                    <span class="text-sm">Encuentra lo que buscas</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+{{-- 
+                                                <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                                    <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('catalogo')}}">
+                                                        <!-- Enlace -->
+                                                        <div class="d-flex">
+                                                            <div class="icon h-10 me-3 d-flex mt-1">
+                                                            </div>
+                                                            <div
+                                                                class="w-100 d-flex align-items-center justify-content-between">
+                                                                <div>
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Llaveros</h6>
                                                                     <span class="text-sm">Encuentra lo que buscas</span>
                                                                 </div>
 
@@ -171,7 +209,7 @@
                                                                 <div>
                                                                     <h6
                                                                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                        Deportes</h6>
+                                                                        Pokemon</h6>
                                                                     <span class="text-sm">Encuentra lo que buscas</span>
                                                                 </div>
 
@@ -190,7 +228,7 @@
                                                             Basketball
                                                         </a>
                                                     </div>
-                                                </li>
+                                                </li> --}}
 
                                             </div>
 
@@ -224,21 +262,36 @@
                                                                     <!-- Enlace -->
                                                                     <h6
                                                                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
-                                                                        Deportes</h6>
+                                                                        Llaveros</h6>
                                                                 </a>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                    <div class="d-flex mb-2">
+
+                                                        <div
+                                                            class="w-100 d-flex align-items-center justify-content-between">
+                                                            <div>
+                                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                                href="{{route('catalogo')}}">
+                                                                    <!-- Enlace -->
+                                                                    <h6
+                                                                        class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                        Pokemón</h6>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {{-- <a class="dropdown-item ps-3 border-radius-md mb-1"
                                                         href="{{route('catalogo')}}">
                                                         Futbol
                                                     </a>
                                                     <a class="dropdown-item ps-3 border-radius-md mb-1"
                                                         href="{{route('catalogo')}}">
                                                         Basketball
-                                                    </a>
+                                                    </a> --}}
 
-                                                    <div class="d-flex mb-2 mt-3">
+                                                    {{-- <div class="d-flex mb-2 mt-3">
                                                         <div
                                                             class="w-100 d-flex align-items-center justify-content-between">
                                                             <div>
@@ -263,7 +316,7 @@
                                                     <a class="dropdown-item ps-3 border-radius-md mb-1"
                                                         href="{{route('catalogo')}}">
                                                         Niño
-                                                    </a>
+                                                    </a> --}}
 
                                                 </div>
                                             </div>

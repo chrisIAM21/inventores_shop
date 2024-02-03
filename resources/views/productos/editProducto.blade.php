@@ -29,7 +29,7 @@
             <br>
             <label for="stock">Stock disponible: </label>
             <input class="form-control w-30" type="number" name="stock" id="stock"
-                value="{{ old('stock') ?? $producto->stock }}"><br>
+                value="{{ old('stock') ?? (int)$producto->stock }}" min="0"><br>
             @error('stock')
                 <h4>*{{ $message }}</h4>
             @enderror
@@ -67,4 +67,19 @@
             <button class="btn btn-white btn-sm w-20 mb-0" type="submit" style="color: red;">ELIMINAR PRODUCTO</button>
         </form>
     </div>
+
+    <!-- Script para mostrar solo el número en el campo de stock -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var stockInput = document.getElementById('stock');
+
+            // Remover el sufijo "unidades" cuando se carga la página
+            stockInput.value = parseInt(stockInput.value) || 0;
+
+            // Escuchar el evento de cambio en el campo de entrada
+            stockInput.addEventListener('change', function() {
+                this.value = parseInt(this.value) || 0;
+            });
+        });
+    </script>
 </x-admin-layout>
